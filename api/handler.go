@@ -15,9 +15,15 @@ func main() {
     r := gin.Default()
     r.GET("/api/goapi1", func(c *gin.Context) {
         c.JSON(200, gin.H{
-            "message": "pong",
+            "message1": "ping",
         })
     })
+    r.GET("/api/goapi2", func(c *gin.Context) {
+        c.JSON(200, gin.H{
+            "message2": "pong",
+        })
+    })
+
     port := os.Getenv("FUNCTIONS_CUSTOMHANDLER_PORT")
     r.Run(":" + port)
 }
