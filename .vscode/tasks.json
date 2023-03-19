@@ -5,7 +5,7 @@
       "type": "func",
       "label": "func: host start",
       "command": "host start",
-      "problemMatcher": "$func-node-watch",
+      "problemMatcher": "$func-watch",
       "isBackground": true,
       "options": {
         "cwd": "${workspaceFolder}/api"
