@@ -11,18 +11,14 @@
     <main>
     <h1>Vanilla JavaScript App</h1>
     <p>Loading content from the API1: <b id="name">...</b></p>
-    <p>Loading content from the API2: <b id="name2">...</b></p>
     </main>
 
     <script>
     (async function() {
-        const { text } = await( await fetch(`/api/message`)).json();
-        document.querySelector('#name').textContent = text;
+        const { message } = await( await fetch(`/api/goapi1`)).json();
+        document.querySelector('#name').textContent = message;
     }());
-    (async function() {
-        const { text2 } = await( await fetch(`/api/message2`)).json();
-        document.querySelector('#name2').textContent = text2;
-    }());
+
     </script>
 </body>
 
